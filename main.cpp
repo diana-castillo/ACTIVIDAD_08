@@ -14,8 +14,14 @@ int main(){
     compu02.setColor("Blanco");
 
     Laboratorio lab;
-    lab.agregarFinal(compu01);
-    lab.agregarFinal(compu02);
+    /*lab.agregarFinal(compu01);
+    lab.agregarFinal(compu02);*/
+    lab<<compu01<<compu02;
+
+    //cout<<compu01;
+    Computadora compu03;
+    cin>>compu03;
+    lab<<compu03;
 
     lab.mostrar();
 

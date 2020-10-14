@@ -18,13 +18,20 @@ void Laboratorio::agregarFinal(const Computadora &c)
 
 void Laboratorio::mostrar()
 {
+    cout<<left;
+    cout<<setw(10)<<"SO";
+    cout<<setw(10)<<"RAM";
+    cout<<setw(8)<<"MARCA";
+    cout<<setw(6)<<"COLOR";
+    cout<<endl;
     for(size_t i=0; i<cont; i++){
         Computadora &c = arreglo[i];
-        cout<<"Sistema operativo: "<<c.getSistemaOperativo()<<endl;
+        cout<<c;
+        /*cout<<"Sistema operativo: "<<c.getSistemaOperativo()<<endl;
         cout<<"Memoria RAM: "<<c.getMemoriaRam()<<endl;
         cout<<"Marca: "<<c.getMarca()<<endl;
         cout<<"Color: "<<c.getColor()<<endl;
-        cout<<endl;
+        cout<<endl;*/
 
-    }   
+    } 
 }

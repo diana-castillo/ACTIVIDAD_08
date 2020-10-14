@@ -2,6 +2,7 @@
 #define COMPUTADORA_H
 
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 class Computadora
@@ -27,6 +28,32 @@ class Computadora
 
         void setColor(const string &v);
         string getColor();
+
+        friend ostream& operator<<(ostream &out, const Computadora &c)
+        {
+            out<<left;
+            out<< setw(10) <<c.sistemaOperativo;
+            out<<setw(10) <<c.memoriaRam;
+            out<<setw(8) <<c.marca;
+            out<<setw(6) <<c.color;
+            out<<endl;
+
+            return out;
+        }
+
+        friend istream& operator>>(istream &in, Computadora &c)
+        {
+            cout<<"Sistema Operativo: ";
+            getline(cin, c.sistemaOperativo);
+            cout<<"Memoria RAM: ";
+            getline(cin, c.memoriaRam);
+            cout<<"Marca: ";
+            getline(cin, c.marca);
+            cout<<"Color: ";
+            getline(cin, c.color);
+
+            return in;
+        }
 };
 
 #endif
