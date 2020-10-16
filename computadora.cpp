@@ -2,6 +2,7 @@
 
 Computadora::Computadora()
 {
+    
 }
 
 Computadora::Computadora(const string &sistemaOperativo, const string &memoriaRam, const string &marca, const string &color)
